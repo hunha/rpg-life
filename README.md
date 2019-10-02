@@ -1,13 +1,12 @@
 ## RPG Life The Game
 
-## Basic Overview - [Live Demo](https://react-shopping-cart-67954.firebaseapp.com/)
+## Basic Overview
 
-This simple shopping cart prototype shows how React components and Redux can be used to build a
-friendly user experience with instant visual updates and scaleable code in ecommerce applications.
+This...
 
 #### Features
 
-- 
+- Test
 
 ## Build/Run
 
