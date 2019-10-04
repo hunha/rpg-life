@@ -6,16 +6,16 @@ const insertActivity = (activity, callback) => {
 };
 
 const findActivities = (accountId) => {
-    return [
-        {
-            id: 1,
-            title: 'Write 3 Ging Mindset'
+    return {
+        "activities": [{
+            "id": 1,
+            "title": 'Write 3 Ging Mindset'
         },
         {
-            id: 2,
-            title: 'Write 3 Ideas'
-        }
-    ]
+            "id": 2,
+            "title": 'Write 3 Ideas'
+        }]
+    }
 };
 
 export default { insertActivity, findActivities };

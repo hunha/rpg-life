@@ -1,7 +1,7 @@
 import { FETCH_ACTIVITIES } from './actionTypes';
 
 const initialState = {
-    activites: []
+  activities: []
 };
 
 export default function(state = initialState, action) {
@@ -9,7 +9,7 @@ export default function(state = initialState, action) {
     case FETCH_ACTIVITIES:
       return {
         ...state,
-        activites: action.payload
+        activities: action.payload
       };
     default:
       return state;

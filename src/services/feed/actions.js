@@ -1,12 +1,11 @@
 import { FETCH_ACTIVITIES } from './actionTypes';
-
-import { productsAPI } from '../util';
+import axios from 'axios';
 
 export const fetchActivities = (callback) => dispatch => {
   return axios
-  .get(productsAPI)
+    .get("http://localhost:8001/activites")
     .then(res => {
-      let { activites } = res.data;
+      let { activities } = res.data;
 
       if (!!callback) {
         callback();
@@ -14,10 +13,10 @@ export const fetchActivities = (callback) => dispatch => {
 
       return dispatch({
         type: FETCH_ACTIVITIES,
-        payload: activites
+        payload: activities
       });
     })
     .catch(err => {
-      console.log('Could not fetch activites. Try again later.');
+      console.log('Could not fetch activities. Try again later.');
     });
 };

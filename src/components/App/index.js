@@ -1,19 +1,22 @@
 import React from 'react';
-import './style.css';
 
-import ActivityList from '../ActivityFeed/ActivityList'
+import Feed from '../Feed';
+
+import './style.scss';
 
 const App = () => (
-  <div className="container">
-    <div className="row">
-      <div className="col-md-4">
-        <ActivityList />
+  <React.Fragment>
+    <div className='container'>
+      <div className='row'>
+        <div className='account-details col-sm-3'>
+
+        </div>
+        <div className='main-content col-sm-9'>
+          <Feed />
+        </div>
       </div>
-      <div className="col-md-8">
-        Activity list
     </div>
-    </div>
-  </div>
+  </React.Fragment >
 );
 
 export default App;

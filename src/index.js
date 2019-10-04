@@ -9,8 +9,8 @@ import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-    <Root>
-        <App />
-    </Root>,
-    document.getElementById('root')
+  <Root>
+    <App />
+  </Root>,
+  document.getElementById('root')
 );
