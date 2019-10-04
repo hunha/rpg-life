@@ -1,15 +1,15 @@
-import activityModel from '../models/activity';
+import accountModel from '../models/account';
 
 const ACCOUNT_ID = 'PJuXArCP0fbs5g7e'; // TODO: Should use login and session.
 
-const getActivities = (req, res) => {
-    activityModel.find(ACCOUNT_ID).then((activities, err) => {
+const getCurrentAccount = (req, res) => {
+    accountModel.getById(ACCOUNT_ID).then((account, err) => {
         if (err) {
             return res.send(err);
         }
 
         return res.json({
-            activities: activities
+            account: account
         });
     }).catch((err) => {
         if (err) {
@@ -18,13 +18,13 @@ const getActivities = (req, res) => {
     });
 };
 
-const insertActivity = (req, res) => {
-    activityModel.insert(req.body.activity).then((err, activity) => {
+const insertAccount = (req, res) => {
+    accountModel.insert(req.body.account).then((err, account) => {
         if (err) {
             res.send(err);
         }
 
-        res.send(activity);
+        res.send(account);
     }).catch((err) => {
         if (err) {
             res.send(err);
@@ -32,4 +32,4 @@ const insertActivity = (req, res) => {
     });
 };
 
-export default { getActivities, insertActivity };
+export default { getCurrentAccount, insertAccount };

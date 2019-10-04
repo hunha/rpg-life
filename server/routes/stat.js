@@ -1,15 +1,15 @@
-import activityModel from '../models/activity';
+import statModel from '../models/stat';
 
 const ACCOUNT_ID = 'PJuXArCP0fbs5g7e'; // TODO: Should use login and session.
 
-const getActivities = (req, res) => {
-    activityModel.find(ACCOUNT_ID).then((activities, err) => {
+const getStats = (req, res) => {
+    statModel.find(ACCOUNT_ID, req.query.type).then((stats, err) => {
         if (err) {
             return res.send(err);
         }
 
         return res.json({
-            activities: activities
+            stats: stats
         });
     }).catch((err) => {
         if (err) {
@@ -18,13 +18,13 @@ const getActivities = (req, res) => {
     });
 };
 
-const insertActivity = (req, res) => {
-    activityModel.insert(req.body.activity).then((err, activity) => {
+const insertStat = (req, res) => {
+    statModel.insert(req.body.stat).then((err, stat) => {
         if (err) {
             res.send(err);
         }
 
-        res.send(activity);
+        res.send(stat);
     }).catch((err) => {
         if (err) {
             res.send(err);
@@ -32,4 +32,4 @@ const insertActivity = (req, res) => {
     });
 };
 
-export default { getActivities, insertActivity };
+export default { getStats, insertStat };

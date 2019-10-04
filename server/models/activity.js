@@ -1,21 +1,14 @@
-var Datastore = require('nedb');
-var db = new Datastore({ filename: '../db/rpglife.db', autoload: true });
+import Datastore from 'nedb-promises';
+import config from '../config/config';
 
-const insertActivity = (activity, callback) => {
-    db.insert(activity, callback);
+const db = new Datastore({ filename: config.DB_ROOT + '/activities.db', autoload: true });
+
+const insert = (activity) => {
+    return db.insert(activity);
 };
 
-const findActivities = (accountId) => {
-    return {
-        "activities": [{
-            "id": 1,
-            "title": 'Write 3 Ging Mindset'
-        },
-        {
-            "id": 2,
-            "title": 'Write 3 Ideas'
-        }]
-    }
+const find = (accountId) => {
+    return db.find({ accountId: accountId });
 };
 
-export default { insertActivity, findActivities };
+export default { insert, find };

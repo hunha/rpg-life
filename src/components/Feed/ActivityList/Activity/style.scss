@@ -1,0 +1,20 @@
+.activity-item {
+  border: 1px solid black;
+}
+
+.activity-item__storyboard {
+  height: 75px;
+  background: #fcfafa;
+}
+
+.activity-item__battle-bar {
+  border: 1px solid black;
+  height: 30px;
+  width: 100%;
+  display: table;
+
+  .battle-bar__title {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
