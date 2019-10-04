@@ -40,7 +40,7 @@ class Feed extends Component {
     return (
       <React.Fragment>
         {isLoading && <Spinner />}
-        <div className="shelf-container">
+        <div className="feed-container">
           <ActivityList activities={activities} />
         </div>
       </React.Fragment>
@@ -49,7 +49,7 @@ class Feed extends Component {
 }
 
 const mapStateToProps = state => ({
-  activities: state.shelf.activities
+  activities: state.feed.activities
 });
 
 export default connect(

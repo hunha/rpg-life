@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 const Activity = ({ activity }) => {
   return (
     <div
-      className="shelf-item"
+      className="activity-item"
     >
-      <p className="shelf-item__title">{activity.title}</p>
+      <p className="activity-item__title">{activity.title}</p>
     </div>
   );
 };
