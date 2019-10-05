@@ -1,0 +1,19 @@
+.stats-container__header {
+  height: 22px;
+  line-height: 21px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+  background: -o-repeating-linear-gradient(left, #2e2e2e, #2e2e2e 2px, #282828 0, #282828 4px);
+  background: repeating-linear-gradient(90deg, #2e2e2e, #2e2e2e 2px, #282828 0, #282828 4px);
+  padding-left: 10px;
+  color: #fff;
+  font-size: 13px;
+  text-shadow: 0 1px 0 #333;
+  letter-spacing: 1px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 400;
+  cursor: default;
+}

@@ -1,6 +1,18 @@
+.container {
+  width: 976px;
+  margin: 0 auto;
+}
+
 .left-content {
-  border: 1px solid black;
+  float: left;
+  vertical-align: baseline;
+}
+
+.sidebar {
+  width: 195px;
 }
 
 .main-content {
+  float: left;
+  width: 761px;
 }

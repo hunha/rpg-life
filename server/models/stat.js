@@ -8,7 +8,11 @@ const insert = (stat) => {
 };
 
 const find = (accountId, type) => {
-    return db.find({ accountId: accountId, type: type });
+    if (type) {
+        return db.find({ accountId: accountId, type: type });
+    }
+
+    return db.find({ accountId: accountId });
 };
 
 export default { insert, find };

@@ -1,4 +1,4 @@
-const DB_ROOT = 'C:/Users/hung.nhat/Dropbox/Backup/rpg-life';
+const DB_ROOT = 'C:/workspace/rpg-life/db';
 
 export default {
     DB_ROOT

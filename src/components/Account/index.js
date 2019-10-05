@@ -4,12 +4,15 @@ import { connect } from 'react-redux';
 
 import { fetchCurrentAccount } from '../../services/account/actions';
 
-import AccountDetails from './AccountDetails';
+import Avatar from './Avatar';
+import Details from './Details';
+
+import './style.scss';
 
 class Account extends Component {
     static propTypes = {
         fetchCurrentAccount: PropTypes.func.isRequired,
-        account: PropTypes.array.isRequired
+        account: PropTypes.any.isRequired
     };
 
     componentDidMount() {
@@ -29,7 +32,10 @@ class Account extends Component {
         return (
             <React.Fragment>
                 <div className="account-container">
-                    <AccountDetails account={account} />
+                    <Avatar account={account} />
+                    <hr className="delimiter"></hr>
+                    <Details account={account} />
+                    <hr className="delimiter"></hr>
                 </div>
             </React.Fragment>
         );
