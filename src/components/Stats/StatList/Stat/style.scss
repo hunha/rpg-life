@@ -1,0 +1,89 @@
+.stat-block {
+  background: #f2f2f2;
+  line-height: 16px;
+  padding: 8px 10px 0;
+  margin: 1px 0;
+  overflow: hidden;
+}
+
+.stat-item {
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  overflow: hidden;
+  margin: 0 0 7px;
+  display: block;
+
+  .stat-item--icon {
+    float: left;
+
+    span {
+      width: 30px;
+      height: 30px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      margin-left: 0;
+      border: 2px solid #fff;
+      border-radius: 50%
+    }
+  }
+
+  .stat-item-bar {
+    margin-left: 38px;
+    margin-top: 4px;
+  }
+}
+
+.stat-item--info {
+  overflow: hidden;
+  padding-left: 2px;
+}
+
+.item-info--name {
+  float: left;
+  font-weight: 700;
+  width: 125px;
+}
+
+.item-info--lv {
+  float: left;
+}
+
+.stat-item--progress {
+  border: 1px solid #ddd;
+  background: #fff;
+  position: relative;
+  height: 5px;
+  padding: 1px;
+
+  .progress-line-timer {
+    border-color: #bfdca3;
+    background: #eff5e9;
+    border-right-width: 1px;
+  }
+
+  .progress-line {
+    border-right-width: 1px;
+    background: #333;
+    background: -o-linear-gradient(top, #333 0, #2e2e2e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #333), to(#2e2e2e));
+    background: linear-gradient(180deg, #333, #2e2e2e);
+    position: relative;
+    overflow: hidden;
+    height: 5px;
+    max-width: 100%;
+    z-index: 3;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,21 @@
+.account-detail__avatar {
+  margin: 0 auto;
+}
+
+.point-block {
+  line-height: 19px;
+  text-decoration: none;
+
+  .name {
+    width: 47px;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  .value {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+}

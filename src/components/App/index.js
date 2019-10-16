@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from '../../static/logo.svg';
-import './style.css';
+
+import Feed from '../Feed';
+import Account from '../Account';
+import Stats from '../Stats';
+
+import './style.scss';
 
 const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
-  </div>
+    <React.Fragment>
+        <div className='container'>
+            <div className='left-content'>
+                <div className='sidebar'>
+                    <Account />
+                    <Stats />
+                </div>
+            </div>
+            <div className='main-content ml-20'>
+                <Feed />
+            </div>
+        </div>
+    </React.Fragment >
 );
 
 export default App;

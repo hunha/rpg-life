@@ -3,10 +3,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './components/App';
+import Root from './Root';
 
+import 'reset-css';
 import './index.scss';
 
 ReactDOM.render(
-    <App />,
+  <Root>
+    <App />
+  </Root>,
   document.getElementById('root')
 );
