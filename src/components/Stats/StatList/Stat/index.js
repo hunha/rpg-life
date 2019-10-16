@@ -2,9 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import './style.scss'
+import './style.scss';
 
-const Stat = ({ stat }) => {
+const Stat = ({ stat, expBar }) => {
+    let progressStyle = {
+        width: '100%'
+    }
+
+    if (expBar) {
+        const levelBar = expBar.bars.filter(b => b.lv === (stat.lv + 1));
+        if (levelBar) {
+            const completeness = stat.exp / levelBar[0].exp * 100;
+            progressStyle.width = completeness + '%';
+        }
+    }
+
     return (
         <div
             className="stat-block"
@@ -20,7 +32,7 @@ const Stat = ({ stat }) => {
                     </div>
                     <div className="stat-item--progress progress">
                         <div className="progress-line-timer"></div>
-                        <div className="progress-line"></div>
+                        <div className="progress-line" style={progressStyle}></div>
                     </div>
                 </div>
             </a>

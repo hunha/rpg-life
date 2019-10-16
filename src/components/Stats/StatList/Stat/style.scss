@@ -35,6 +35,7 @@
       flex-direction: row;
       margin-left: 0;
       border: 2px solid #fff;
+      border-radius: 50%
     }
   }
 
@@ -60,7 +61,6 @@
 }
 
 .stat-item--progress {
-  border-radius: 5px;
   border: 1px solid #ddd;
   background: #fff;
   position: relative;
@@ -70,34 +70,20 @@
   .progress-line-timer {
     border-color: #bfdca3;
     background: #eff5e9;
-    border-radius: 5px;
     border-right-width: 1px;
   }
 
   .progress-line {
-    border-radius: 5px;
     border-right-width: 1px;
-    background: #6cad2b;
-    background: -o-linear-gradient(top, #6cad2b 0, #4d7c1e 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6cad2b), to(#4d7c1e));
-    background: linear-gradient(180deg, #6cad2b, #4d7c1e);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    background: #333;
+    background: -o-linear-gradient(top, #333 0, #2e2e2e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #333), to(#2e2e2e));
+    background: linear-gradient(180deg, #333, #2e2e2e);
     position: relative;
     overflow: hidden;
     height: 5px;
     max-width: 100%;
     z-index: 3;
     vertical-align: middle;
-  }
-}
-
-.stats-container__nen {
-  .progress-line {
-    background: #cc7032;
-    background: -o-linear-gradient(top, #cc7032 0, #b3382c 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cc7032), to(#b3382c));
-    background: linear-gradient(180deg, #cc7032, #b3382c);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$color1",endColorstr="$color2",GradientType=0);
   }
 }

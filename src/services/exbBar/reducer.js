@@ -1,15 +1,15 @@
-import { FETCH_STATS } from './actionTypes';
+import { FETCH_EXB_BAR } from './actionTypes';
 
 const initialState = {
-    stats: []
+    expBars: []
 };
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case FETCH_STATS:
+        case FETCH_EXB_BAR:
             return {
                 ...state,
-                stats: action.payload
+                expBars: action.payload
             };
         default:
             return state;

@@ -21,6 +21,7 @@ app.route('/stats')
     .post(statRoute.insertStat);
 
 app.route('/exp-bars')
+    .get(expBarRoute.getExpBars)
     .post(expBarRoute.insertExpBar);
 
 app.route('/exp-bars/:key')

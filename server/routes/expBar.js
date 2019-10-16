@@ -1,5 +1,21 @@
 import expBarModel from '../models/expBar';
 
+const getExpBars = (req, res) => {
+    expBarModel.find().then((expBars, err) => {
+        if (err) {
+            return res.send(err);
+        }
+
+        return res.json({
+            expBars: expBars
+        });
+    }).catch((err) => {
+        if (err) {
+            return res.send(err);
+        }
+    });
+};
+
 const getByKey = (req, res) => {
     expBarModel.getByKey(req.params.key).then((expBar, err) => {
         if (err) {
@@ -30,4 +46,4 @@ const insertExpBar = (req, res) => {
     });
 };
 
-export default { getByKey, insertExpBar };
+export default { getExpBars, getByKey, insertExpBar };
